@@ -5,7 +5,9 @@ use Alura\Doctrine\Helper\EntityManagerFactory;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $aluno = new Aluno();
-$aluno->setNome('Vinicius Dias');
+/* Usando variavel $argv para inserir aluno na linha de comando. ex. php criar-aluno 'Fabio Leal' */
+$aluno->setNome($argv[1]);
+/* */
 
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
