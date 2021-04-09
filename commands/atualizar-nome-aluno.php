@@ -8,6 +8,10 @@ $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 $alunoRepository = $entityManager->getRepository(Aluno::class);
 
+/* Atualizar aluno exemplo:
+        php atualizar-nome-aluno.php 3 'Meu Novo Nome'
+   Onde 3 é o Id do Aluno.
+*/
 $id = $argv[1]; /* argumento 1 passado na linha de comando */
 $novoNome=$argv[2]; /*a argumento 2 passado na linha de comando */
 /* busca padrão */
