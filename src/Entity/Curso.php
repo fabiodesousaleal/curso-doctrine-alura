@@ -4,6 +4,7 @@
 namespace Alura\Doctrine\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @Entity
@@ -23,11 +24,11 @@ class Curso
     /**
      * @ManyToMany(targetEntity="Aluno", inversedBy="cursos")
      */
-    private Aluno $alunos;
+    private $alunos;
 
     public function __construct()
     {
-        $this->alunos= new ArrayCollection();
+        $this->alunos = new ArrayCollection();
     }
     public function getId(): int
     {

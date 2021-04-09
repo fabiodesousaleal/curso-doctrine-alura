@@ -30,7 +30,7 @@ class Aluno
     /**
      * @ManyToMany (targetEntity="Curso", mappedBy="alunos")
      */
-    private Curso $cursos;
+    private $cursos;
 
     public function __construct()
     {
