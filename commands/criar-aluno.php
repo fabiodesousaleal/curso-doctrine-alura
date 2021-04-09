@@ -17,7 +17,12 @@ for($i=2; $i < $argc; $i++){
     $telefone = new Telefone();
     $telefone->setNumero($numeroTelefone);
 
-    $entityManager->persist($telefone);
+   /*
+   $entityManager->persist($telefone);
+   outra forma de persistir é atribuindo a anotation no
+   atributo telefone da classe Aluno  cascade=("persist", "remove")
+   */
+
     $aluno->addTelefones($telefone);
 }
 

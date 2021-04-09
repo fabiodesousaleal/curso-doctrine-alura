@@ -22,8 +22,9 @@ class Aluno
      */
     private $nome;
     /**
-     * @OneToMany(targetEntity="Telefone", mappedBy="aluno")
+     * @OneToMany(targetEntity="Telefone", mappedBy="aluno", cascade={"remove", "persist"})
      */
+    /* muitos telefones para um aluno */
     private $telefones;
 
     public function __construct()
